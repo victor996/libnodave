@@ -36,6 +36,7 @@ static int siemens_usb_mpi_probe(struct usb_interface *interface,
 	const struct usb_device_id *id){
 		return 0;
 	};
+	
 
 	static void __exit siemens_usb_mpi_exit(void)
 	{
