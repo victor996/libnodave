@@ -26,22 +26,27 @@
 #define DRIVER_DESC "Driver for Siemens USB/MPI adapter"
 #define NAME "Siemens USB-MPI"
 
+
 static struct usb_device_id id_table [] = {
 	{ USB_DEVICE(0x908, 0x0004) },	// Vendor and product id for 6ES7-972-0CB20-0XA0
 	{ },
 };
 MODULE_DEVICE_TABLE(usb, id_table);
 
+static int siemens_usb_mpi_probe(struct usb_interface *interface,
+	const struct usb_device_id *id){
+return 0;
+};
 
 static struct usb_driver siemens_usb_mpi_driver = {
 	// .owner =	THIS_MODULE,
 	.name = NAME,
 	.id_table =	id_table,
-	// .probe =	usb_serial_probe,
-	.disconnect =	usb_serial_console_disconnect,
+        .probe =	siemens_usb_mpi_probe,
+	.disconnect =	siemens_usb_mpi_exit,
 };
 
-static struct usb_serial_device_type siemens_usb_mpi_device = {
+static struct usb_serial_driver siemens_usb_mpi_device = {
 	.owner =		THIS_MODULE,
 	.name =			"Siemens USB-MPI",
 	.id_table =		id_table,

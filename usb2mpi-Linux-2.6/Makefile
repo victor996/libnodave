@@ -1,4 +1,4 @@
-obj-m := siemens_mpi.o
+obj-m := usb-skeleton.o
 
 
 

@@ -1,0 +1,4 @@
+make
+sudo cp usb-skeleton.ko /lib/modules/$(uname -r)/kernel/drivers/usb/serial/
+sudo depmod -a
+sudo echo "usb-skeleton" >> /etc/modules

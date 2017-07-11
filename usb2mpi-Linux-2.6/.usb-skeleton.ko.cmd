@@ -1,0 +1,1 @@
+cmd_/home/pi/libnodave/usb2mpi-Linux-2.6/usb-skeleton.ko := ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /home/pi/libnodave/usb2mpi-Linux-2.6/usb-skeleton.ko /home/pi/libnodave/usb2mpi-Linux-2.6/usb-skeleton.o /home/pi/libnodave/usb2mpi-Linux-2.6/usb-skeleton.mod.o ;  true
